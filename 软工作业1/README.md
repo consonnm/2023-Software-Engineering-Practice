@@ -2,7 +2,7 @@
 
 ### 0. 界面及功能展示
 
-![img](https://img-blog.csdnimg.cn/c405efcdbfa642939f6aefc5ed9cdea3.gif)![点击并拖拽以移动](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==)
+![img](https://img-blog.csdnimg.cn/c405efcdbfa642939f6aefc5ed9cdea3.gif)
 
 ### 1. PSP表格
 
@@ -124,8 +124,6 @@ def calculate_science(l, temp, ch):
     return (eval(temp_val), len(temp)-1)
 ```
 
-![点击并拖拽以移动](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==)
-
 ### 3. 设计与实现过程
 
 1. 导入所需的库：
@@ -213,8 +211,6 @@ def calculate_science(l, temp, ch):
         self.assertAlmostEqual(result[0], 0.9306, places=4)
 ```
 
-![点击并拖拽以移动](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==)
-
 ### 6. 异常处理
 
 - **对不符合规范计算表达式的式子抛出异常并显示Error**
@@ -231,8 +227,6 @@ def calculate(temp):
     except Exception as e:
         result_var.set("Error")
 ```
-
-![点击并拖拽以移动](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==)
 
 ### 7. 心路历程和收获
 

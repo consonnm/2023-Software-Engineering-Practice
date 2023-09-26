@@ -165,7 +165,7 @@ def calculate_science(l, temp, ch):
 
 ### 5. 单元测试展示
 
-​    ![img](https://img-blog.csdnimg.cn/725a3484b9b24b919e9ae3a9857e1455.png)![点击并拖拽以移动](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==)编辑
+​    ![img](https://img-blog.csdnimg.cn/725a3484b9b24b919e9ae3a9857e1455.png)
 
 - **单元测试样例**
 

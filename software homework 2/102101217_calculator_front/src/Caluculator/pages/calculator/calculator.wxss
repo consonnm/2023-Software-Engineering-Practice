@@ -1,0 +1,128 @@
+/* pages/Calculator/Calculator.wxss */
+
+.calculateScreen {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  background-color: #eee;
+  z-index: 99;
+  box-shadow: 6rpx 6rpx 12px 6rpx rgba(211, 209, 209, 0.3);
+  overflow: hidden;
+  backdrop-filter: blur(20rpx);
+}
+.calcuProcess {
+  width: 100%;
+  height: 70rpx;
+  line-height: 90rpx;
+  font-size: 32rpx;
+  text-align: right;
+  color: #1d1a1a;
+}
+.inputNum {
+  width: calc(100vw - 40rpx);
+  height: calc(100% - 200rpx);
+  line-height: 115rpx;
+  font-size: 80rpx;
+  text-align: right;
+  padding: 0rpx 20rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 5px 5px 5px rgb(250, 245, 245);
+}
+
+.keyboard {
+  width: 100%;
+  height: calc(80vh - 32rpx);
+  padding-top: 5rpx;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.keyboards {
+  width: 20%;
+  height: 10%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.keys {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  line-height: 130rpx;
+  text-align: center;
+  font-size: 30rpx;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(145deg, rgba(235,228,228, .3), rgba(221,214,214, .2));
+  color: #999;
+  box-shadow: -7px -7px 20px 0px #fff9,
+              -4px -4px 5px 0px #fff9,
+              7px 7px 20px 0px #0002,
+              4px 4px 5px 0px #0001;
+}
+.keys:active{
+  box-shadow: 0px 0px 0px 0px #fff9,
+              0px 0px 0px 0px #fff9,
+              0px 0px 0px 0px #0001,
+              0px 0px 0px 0px #0001,
+              inset -7px -7px 20px 0px #fff9,
+              inset -4px -4px 5px 0px #fff9,
+              inset 7px 7px 20px 0px #0003,
+              inset 4px 4px 5px 0px #0001;
+}
+.result {
+  text-align: right;
+  line-height: var(--button-height);
+  font-size: 48px;
+  font-family: Helvetica;
+  padding: 0 20px;
+  color: #666;
+}
+.show {
+  text-align: right;
+  line-height: var(--button-height);
+  font-size: 30px;
+  font-family: Helvetica;
+  padding: 0 20px;
+  color: #666;
+}
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 3em;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}

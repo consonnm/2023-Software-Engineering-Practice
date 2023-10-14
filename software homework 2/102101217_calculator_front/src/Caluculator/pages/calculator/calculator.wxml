@@ -1,0 +1,41 @@
+<van-cell title="功能切换" is-link bind:click="show" />
+<van-popup
+  show="{{ showChose }}"
+  closeable
+  position="top"
+  custom-style="height: 20%;"
+  bind:close="show"
+  round
+  z-index:100
+>
+<van-divider contentPosition="center">功能</van-divider>
+<navigator url="/pages/history/history">
+  <text style="margin: 0 10px; color: #999;">历史记录</text>
+</navigator>
+<span style="margin: 0 10px; color: #999;">          </span>
+<navigator url="/pages/rate/rate">
+  <text style="margin: 0 10px; color: #999;">利率计算</text>
+</navigator>
+
+</van-popup>
+<!-- 屏幕部分 -->
+<view class="calculateScreen" style="width: 750rpx; height: 206rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+  <!-- 计算过程 -->
+  <view class="show">
+   {{ expression }}
+  </view>
+  <!-- 结果和输入 -->
+  <view class="result">
+    {{ resultNum }}
+  </view>  
+</view>
+<!-- 键盘界面 -->
+<view class="keyboard">
+    <view class="keyboards" wx:for="{{ keysdata }}" wx:key="index" >
+        <view  class="keys" data-num="{{ item }}"  bindtap="keyClick" >
+                {{ item.name }}
+        </view>
+    </view>
+</view>
+
+

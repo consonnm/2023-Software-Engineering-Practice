@@ -1,0 +1,4 @@
+/* pages/ratechange/ratechange.wxss */
+.page {
+  background-color: rgb(253, 249, 249); /* 灰色背景 */
+}

@@ -1,0 +1,4 @@
+/* pages/rate/rate.wxss */
+.page {
+  background-color: #eee; /* 灰色背景 */
+}

@@ -1,0 +1,7 @@
+<!--pages/history/history.wxml-->
+<view>
+  <block wx:for="{{historyRecords}}" wx:for-index="index" wx:for-item="record">
+    <van-divider contentPosition="center">History</van-divider>
+    <view style="text-align: center; color: #888;">{{record}}</view>
+  </block>
+</view>

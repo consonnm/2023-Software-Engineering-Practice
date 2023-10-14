@@ -1,0 +1,26 @@
+<!--pages/ratechange/ratechange.wxml-->
+<view class="page">
+  <van-cell-group title="----------------------存款利率修改--------------------">
+
+    <van-field label="活期存款" model:value="{{ rate0 }}" placeholder="请输入利率" border="{{ true }}" bind:change="onChange" />
+    <van-field label="三个月" model:value="{{ rate1 }}" placeholder="请输入利率" border="{{ true }}" bind:change="onChange" />
+    <van-field label="半年" model:value="{{ rate2 }}" placeholder="请输入利率" border="{{ true }}" bind:change="onChange" />
+    <van-field label="一年" model:value="{{ rate3 }}" placeholder="请输入利率" border="{{ true }}" bind:change="onChange" />
+    <van-field label="两年" model:value="{{ rate4 }}" placeholder="请输入利率" border="{{ true }}" bind:change="onChange" />
+    <van-field label="三年" model:value="{{ rate5 }}" placeholder="请输入利率" border="{{ true }}" bind:change="onChange" />
+    <van-field label="五年" model:value="{{ rate6 }}" placeholder="请输入利率" border="{{ true }}" bind:change="onChange" />
+  </van-cell-group>
+
+  <van-cell-group title="----------------------贷款利率修改--------------------">
+    <van-field label="六个月" model:value="{{ rate7 }}" placeholder="请输入利率" border="{{ true }}" bind:change="onChange" />
+    <van-field label="一年" model:value="{{ rate8 }}" placeholder="请输入利率" border="{{ true }}" bind:change="onChange" />
+    <van-field label="一年至三年" model:value="{{ rate9 }}" placeholder="请输入利率" border="{{ true }}" bind:change="onChange" />
+    <van-field label="三到五年" model:value="{{ rate10 }}" placeholder="请输入利率" border="{{ true }}" bind:change="onChange" />
+    <van-field label="五年" model:value="{{ rate11 }}" placeholder="请输入利率" border="{{ true }}" bind:change="onChange" />
+  </van-cell-group>
+  <view style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+    <van-button round type="info" color="#ffffff" bindtap= "updateRate">
+      <text style="margin: 0 10px; color: #999;">确认修改</text>
+    </van-button>
+  </view>
+</view>

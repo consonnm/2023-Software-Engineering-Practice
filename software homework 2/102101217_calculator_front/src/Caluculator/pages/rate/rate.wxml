@@ -1,0 +1,57 @@
+<view class="page">
+  <navigator url="/pages/ratechange/ratechange">
+    <van-icon name="setting-o" size="30" />
+  </navigator>
+  
+  <van-cell-group title="---------------------存款利息计算---------------------">
+    <van-field label="存款金额" model:value="{{ depositMoney }}" placeholder="请输入存款金额" border="{{ true }}" bind:change="onChange" />
+    <van-field label="存款时长" model:value="{{ depositRateTime }}" placeholder="请输入时间/年" border="{{ true }}" bind:change="onChange" />
+  </van-cell-group>
+  <view style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+    <van-button round type="info" color="#ffffff" bindtap="fixDeposit">
+      <text style="margin: 0 10px; color: #999;" >定期存款计算</text>
+    </van-button>
+    <van-button round type="info" color="#ffffff" bindtap="currentDeposit">
+      <text style="margin: 0 10px; color: #999;" >活期存款计算</text>
+    </van-button>
+    
+  </view>
+
+
+
+  <van-cell-group inset title="结果">
+    <van-cell title="利息" value="{{depositRateResult}}" />
+  </van-cell-group>
+  <van-cell-group title="---------------------贷款利息计算---------------------">
+    <van-field label="贷款金额" model:value="{{ loanMoney }}" placeholder="请输入贷款金额" border="{{ true }}" bind:change="onChange" />
+    <van-field label="贷款时长" model:value="{{ loanRateTime }}" placeholder="请输入时间/年" border="{{ true }}" bind:change="onChange" />
+  </van-cell-group>
+  <view style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+    <van-button round type="info" color="#ffffff"  bindtap="loanCalculate">
+      <text style="margin: 0 10px; color: #999;">贷款利息计算</text>
+    </van-button>
+  </view>
+  <van-cell-group inset title="结果">
+    <van-cell title="利息" value="{{loanRateResult}}" />
+  </van-cell-group>
+  <van-divider contentPosition="center" borderColor="#1989fa">
+    利息展示说明
+  </van-divider>
+  
+  <van-cell-group inset title="存款利率">
+    <van-cell title="活期存款" value="{{depositRate[0]}}" />
+    <van-cell title="三个月" value="{{depositRate[1]}}" />
+    <van-cell title="半年" value="{{depositRate[2]}}" />
+    <van-cell title="一年" value="{{depositRate[3]}}" />
+    <van-cell title="两年" value="{{depositRate[4]}}" />
+    <van-cell title="三年" value="{{depositRate[5]}}" />
+    <van-cell title="五年" value="{{depositRate[6]}}" />
+  </van-cell-group>
+  <van-cell-group inset title="贷款利率">
+    <van-cell title="六个月" value="{{loanRate[0]}}" />
+    <van-cell title="一年" value="{{loanRate[1]}}" />
+    <van-cell title="一至三年" value="{{loanRate[2]}}" />
+    <van-cell title="三到五年" value="{{loanRate[3]}}" />
+    <van-cell title="五年" value="{{loanRate[4]}}" />
+  </van-cell-group>
+</view>
